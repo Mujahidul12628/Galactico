@@ -8,13 +8,10 @@ function App() {
 
   return (
     <>
-      <div>
-        <Navbar></Navbar>
-        <Footer></Footer>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <Navbar></Navbar>
+      <Footer></Footer>
+
     </>
   )
 }
