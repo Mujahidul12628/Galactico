@@ -32,7 +32,7 @@ const Navbar = () => {
             .catch(error => console.log(error))
     }
     return (
-        <div className="w-full mx-auto font-semibold text-white navbar max-w-7xl navbar-bg" >
+        <div className="w-full mx-auto font-semibold text-black navbar navbar-bg" >
 
             <div className="navbar-start ">
                 <div className="dropdown">
@@ -44,16 +44,15 @@ const Navbar = () => {
                         <li><NavLink className={({ isActive, isPending }) => isActive ? "active-link" : isPending ? "pending" : ""} to='/blog'>Blog</NavLink ></li>
                     </ul>
                 </div>
-                <Link to='/' className="text-2xl font-semibold "><span className='text-[#ffffff]'>
+                <Link to='/' className="text-2xl font-semibold "><span className='text-black'>
                     {/* <img className="h-[60%] w-[60%] object-contain sm:h-[40%] sm:w-[40%] md:h-[50%] md:w-[50%]" src={logo} alt="" /> */}
-
                     Galactico
 
                 </span></Link>
             </div>
 
             <div className="hidden navbar-center md:flex">
-                <ul className="gap-2 px-1 text-white menu menu-horizontal">
+                <ul className="gap-2 px-1 text-black menu menu-horizontal">
                     <li><NavLink className={({ isActive, isPending }) => isActive ? "active-link" : isPending ? "pending" : ""} to='/'>Home</NavLink></li>
                     <li><NavLink className={({ isActive, isPending }) => isActive ? "active-link" : isPending ? "pending" : ""} to='/blog'>Blog</NavLink></li>
 
@@ -85,10 +84,10 @@ const Navbar = () => {
                     </div>
                 }
                 {
-                    user ? <button onClick={handleLogout} className="px-2 py-1 text-white rounded-md md:py-2 logged-in-out">
+                    user ? <button onClick={handleLogout} className="px-2 py-1 text-black rounded-md md:py-2 logged-in-out">
                         <Link to='/'>Log Out</Link>
                     </button>
-                        : <button className="px-2 py-1 text-white rounded-md md:py-2 logged-in-out">
+                        : <button className="px-2 py-1 text-black rounded-md md:py-2 logged-in-out">
                             <Link to='/login'>Login</Link>
                         </button>
                 }

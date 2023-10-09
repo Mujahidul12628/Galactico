@@ -1,16 +1,14 @@
 
 import './App.css'
-import Footer from './assets/pages/Home/Footer'
-import Navbar from './assets/pages/Home/Navbar'
+import Banner from './assets/pages/Home/Banner'
 
 function App() {
 
 
   return (
     <>
+      <Banner></Banner>
 
-      <Navbar></Navbar>
-      <Footer></Footer>
 
     </>
   )
