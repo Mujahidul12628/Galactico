@@ -9,8 +9,11 @@
 
 .active-link {
     background-image: linear-gradient(180deg, #006d2d, #006129);
+    background: linear-gradient(138deg, rgb(0, 197, 161) 0%, rgb(0, 210, 91) 100%);
+    box-shadow: #789285;
     font-weight: 500;
     color: white;
+    border: 1px solid rgb(0, 163, 81);
 }
 
 .menu a:hover {
@@ -22,7 +25,8 @@
 
 .navbar-bg {
     background: linear-gradient(180deg, #5C6E58, #8aa899);
-    background: linear-gradient(180deg, rgba(20, 185, 130, 0.8), rgba(0, 151, 78, 0.8));
+    background: linear-gradient(160deg, rgba(20, 185, 130, 0.8), rgba(0, 151, 78, 0.8));
+    background: linear-gradient(170deg, rgb(0, 197, 161) 0%, rgb(42, 167, 96) 100%);
     box-shadow: 0 2px 4px rgba(194, 233, 176, 0.1);
 }
 
@@ -50,4 +54,9 @@
 
 .background1 {
     background-color: #5C6E58;
+}
+
+.dropdown-bg {
+    background: linear-gradient(170deg, rgb(0, 197, 161) 0%, rgb(42, 167, 96) 100%);
+    box-shadow: 0 2px 4px rgba(194, 233, 176, 0.1);
 }
