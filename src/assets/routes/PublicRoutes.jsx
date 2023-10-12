@@ -5,6 +5,10 @@ import Blog from "../pages/Blog/Blog";
 import Home from "../pages/Home/Home";
 import Register from "../pages/Register/Register";
 import SignUp from "../pages/Login/SignUp";
+import AllToy from "../pages/AllToy/AllToy";
+import AddToy from "../pages/AddToy/AddToy";
+import MyToy from "../pages/MyToy/MyToy";
+import ViewDetails from "../pages/ViewDetails/ViewDetails";
 
 
 const PublicRoutes = createBrowserRouter([
@@ -20,6 +24,22 @@ const PublicRoutes = createBrowserRouter([
             {
                 path: "/blog",
                 element: <Blog></Blog>
+            },
+            {
+                path: "/allToy",
+                element: <AllToy></AllToy>
+            },
+            {
+                path: "/addToy",
+                element: <AddToy></AddToy>
+            },
+            {
+                path: "/myToy",
+                element: <MyToy></MyToy>
+            },
+            {
+                path: "/toysData/:id",
+                element: <ViewDetails></ViewDetails>
             },
             // {
             //     path: "/chef/:id",
