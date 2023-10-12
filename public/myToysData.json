@@ -1,0 +1,72 @@
+[
+    {
+        "id": 3,
+        "seller": "Muntasir",
+        "sellerID": 1003,
+        "sellerName": "Muntasir",
+        "sellerEmail": "muntasir@example.com",
+        "sellerRating": 4.7,
+        "name": "Go Zipster",
+        "subCategory": "Zip",
+        "quantity": 1,
+        "image": "https://i.ibb.co/rsfZbFG/zip4.jpg",
+        "price": "$32",
+        "rating": 4.7
+    },
+    {
+        "id": 8,
+        "seller": "Munisha",
+        "sellerID": 1008,
+        "sellerName": "Munisha",
+        "sellerEmail": "munisha@example.com",
+        "sellerRating": 4.6,
+        "name": "Elegant Era",
+        "subCategory": "Vintage",
+        "quantity": 2,
+        "image": "https://i.ibb.co/SBfy5MQ/vintage3.jpg",
+        "price": "$45",
+        "rating": 4.8
+    },
+    {
+        "id": 7,
+        "seller": "Muskan",
+        "sellerID": 1007,
+        "sellerName": "Muskan",
+        "sellerEmail": "muskan@example.com",
+        "sellerRating": 4.8,
+        "name": "Vintage Vista",
+        "subCategory": "Vintage",
+        "quantity": 2,
+        "image": "https://i.ibb.co/HHRQj23/vintage8.jpg",
+        "price": "$50",
+        "rating": 4.3
+    },
+    {
+        "id": 15,
+        "seller": "Muntasir",
+        "sellerID": 1015,
+        "sellerName": "Muntasir",
+        "sellerEmail": "muntasir@example.com",
+        "sellerRating": 4.7,
+        "name": "Turbo Thrill",
+        "subCategory": "Formula 1",
+        "quantity": 19,
+        "image": "https://i.ibb.co/4tyxPYC/formula5.jpg",
+        "price": "$11",
+        "rating": 4.2
+    },
+    {
+        "id": 16,
+        "seller": "Munifa",
+        "sellerID": 1016,
+        "sellerName": "Munifa",
+        "sellerEmail": "munifa@example.com",
+        "sellerRating": 4.7,
+        "name": "Grand Pulse",
+        "subCategory": "Formula 1",
+        "quantity": 1,
+        "image": "https://i.ibb.co/JHTRznb/formula3.jpg",
+        "price": "$17",
+        "rating": 4.2
+    }
+]
