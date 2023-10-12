@@ -24,8 +24,71 @@ const Banner = () => {
                 className="mySwiper"
             >
 
+
+
                 <SwiperSlide>
-                    <div className="h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/Dtx01dk/car.jpg')]">
+                    {/* <div className="h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/RTHv1xH/car2.jpg')]"> */}
+                    {/* <div className="h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/ZGCSvvS/slider4.jpg')]"> */}
+                    <div className="h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[550px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/fYFdgzX/slider1.jpg')]">
+                        <div className="absolute w-full h-full bg-black opacity-40"></div>
+                        <div className="z-10 p-5 mx-auto text-center sm:w-2/3 sm:pl-10">
+                            <h2 className="text-3xl font-bold text-white sm:text-3xl ">
+                                <span className=''>Elevate Your Car Experience </span>
+                            </h2>
+                            <p className="w-9/12 mx-auto mt-5 text-justify text-md text-slate-300 sm:text-lg">
+                                Explore the wheel symphony, discover your dream car. Unleash excitement at our curated haven, designed for true automotive aficionados.
+                            </p>
+                            <div className='flex items-center justify-center'>
+                                <button
+                                    onClick={() => scrollToTarget("popularRecipes")}
+                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white border-2 border-white rounded-md shadow hover:bg-green-600 shadow-green-600"
+                                >
+                                    Buy Now
+                                </button>
+                                {/* <button
+                                    onClick={() => scrollToTarget("popularRecipes")}
+                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white bg-green-600 border-2 border-green-600 rounded-md shadow-lg hover:bg-transparent hover:border-2"
+                                >
+                                    Details
+                                </button> */}
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    {/* <div className="h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/CJcQRb7/car3.jpg')]"> */}
+                    {/* <div className="h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/zF0wGcN/slider3.jpg')]"> */}
+                    <div className="h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[550px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/pJQ74q2/d1.jpg')]">
+                        <div className="absolute w-full h-full bg-black opacity-50"></div>
+                        <div className="z-10 p-5 mx-auto text-center sm:w-2/3 sm:pl-10">
+                            <h2 className="text-3xl font-bold text-white sm:text-3xl ">
+                                <span className=''></span>  Ultimate Car Destination
+                            </h2>
+                            <p className="w-9/12 mx-auto mt-5 text-justify text-md text-slate-300 sm:text-lg">
+                                Embark on the wheel symphony; uncover your dream car. Unleash excitement at our curated haven, a playground for automotive enthusiasts.
+                            </p>
+                            <div className='flex items-center justify-center'>
+                                <button
+                                    onClick={() => scrollToTarget("popularRecipes")}
+                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white border-2 border-white rounded-md shadow hover:bg-green-600 shadow-green-600"
+                                >
+                                    Buy Now
+                                </button>
+                                {/* <button
+                                    onClick={() => scrollToTarget("popularRecipes")}
+                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white bg-green-600 border-2 border-green-600 rounded-md shadow-lg hover:bg-transparent hover:border-2"
+                                >
+                                    Details
+                                </button> */}
+                            </div>
+                        </div>
+                    </div>
+
+                </SwiperSlide>
+
+                {/* <SwiperSlide>
+                    <div className="h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/jTDsRdb/slider2.jpg')]">
                         <div className="absolute w-full h-full bg-black opacity-30"></div>
                         <div className="z-10 p-5 mx-auto text-center sm:w-2/3 sm:pl-10">
                             <h2 className="text-3xl font-bold text-white sm:text-3xl ">
@@ -37,77 +100,14 @@ const Banner = () => {
                             <div className='flex items-center justify-center'>
                                 <button
                                     onClick={() => scrollToTarget("popularRecipes")}
-                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white border-2 border-yellow-500 rounded-md shadow hover:bg-yellow-500 shadow-yellow-500"
+                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white border-2 border-white rounded-md shadow hover:bg-green-600 shadow-green-600"
                                 >
                                     Buy Now
-                                </button>
-                                <button
-                                    onClick={() => scrollToTarget("popularRecipes")}
-                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white bg-yellow-500 border-2 border-yellow-500 rounded-md shadow-lg hover:bg-transparent hover:border-2"
-                                >
-                                    Details
                                 </button>
                             </div>
                         </div>
                     </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <div className="h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/RTHv1xH/car2.jpg')]">
-                        <div className="absolute w-full h-full bg-black opacity-30"></div>
-                        <div className="z-10 p-5 mx-auto text-center sm:w-2/3 sm:pl-10">
-                            <h2 className="text-3xl font-bold text-white sm:text-3xl ">
-                                <span className=''>Elevate Your Car Experience </span>
-                            </h2>
-                            <p className="w-9/12 mx-auto mt-5 text-justify text-md text-slate-300 sm:text-lg">
-                                Explore the wheel symphony, discover your dream car. Unleash excitement at our curated haven, designed for true automotive aficionados.
-                            </p>
-                            <div className='flex items-center justify-center'>
-                                <button
-                                    onClick={() => scrollToTarget("popularRecipes")}
-                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white border-2 border-yellow-500 rounded-md shadow hover:bg-yellow-500 shadow-yellow-500"
-                                >
-                                    Buy Now
-                                </button>
-                                <button
-                                    onClick={() => scrollToTarget("popularRecipes")}
-                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white bg-yellow-500 border-2 border-yellow-500 rounded-md shadow-lg hover:bg-transparent hover:border-2"
-                                >
-                                    Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <div className="h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/CJcQRb7/car3.jpg')]">
-                        <div className="absolute w-full h-full bg-black opacity-30"></div>
-                        <div className="z-10 p-5 mx-auto text-center sm:w-2/3 sm:pl-10">
-                            <h2 className="text-3xl font-bold text-white sm:text-3xl ">
-                                <span className=''></span>  Ultimate Car Destination
-                            </h2>
-                            <p className="w-9/12 mx-auto mt-5 text-justify text-md text-slate-300 sm:text-lg">
-                                Embark on the wheel symphony; uncover your dream car. Unleash excitement at our curated haven, a playground for automotive enthusiasts.
-                            </p>
-                            <div className='flex items-center justify-center'>
-                                <button
-                                    onClick={() => scrollToTarget("popularRecipes")}
-                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white border-2 border-yellow-500 rounded-md shadow hover:bg-yellow-500 shadow-yellow-500"
-                                >
-                                    Buy Now
-                                </button>
-                                <button
-                                    onClick={() => scrollToTarget("popularRecipes")}
-                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white bg-yellow-500 border-2 border-yellow-500 rounded-md shadow-lg hover:bg-transparent hover:border-2"
-                                >
-                                    Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                </SwiperSlide>
+                </SwiperSlide> */}
 
 
 
