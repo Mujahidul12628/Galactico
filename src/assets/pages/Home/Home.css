@@ -1,0 +1,65 @@
+.submit {
+    width: 120px;
+    padding: 5px;
+    font-weight: 500;
+    color: white;
+    border-radius: 3px;
+    margin: 10px auto;
+    background: linear-gradient(138deg, rgb(0, 197, 161) 0%, rgb(0, 210, 91) 100%);
+}
+
+.details {
+    background: linear-gradient(138deg, rgb(0, 197, 161) 0%, rgb(0, 210, 91) 100%);
+}
+
+.add {
+    padding: 5px;
+    font-weight: 500;
+    color: white;
+    border-radius: 3px;
+    margin: 10px auto;
+    background: linear-gradient(138deg, rgb(0, 197, 161) 0%, rgb(0, 210, 91) 100%);
+}
+
+
+
+.box-shadow-carousel {
+    box-shadow: 0 0 8px rgb(0, 224, 79, 0.8);
+}
+
+.view-shadow {
+    box-shadow: 0 0 8px rgba(215, 214, 214, 0.8);
+}
+
+#box-shad {
+    box-shadow: 0 0 10px rgb(0, 224, 79, 0.8);
+}
+
+.shadow-box {
+    box-shadow: 0 0 5px rgb(0, 224, 79, 0.8);
+}
+
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    /* Set the width of the scrollbar */
+}
+
+/* Define the styles for the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(138deg, rgb(0, 197, 161) 0%, rgb(0, 210, 91) 100%);
+    /* Set the color of the thumb */
+    border-radius: 6px;
+
+}
+
+/* Define the styles for the scrollbar track */
+::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    /* Set the color of the track */
+}
+
+.custom-scrollbar {
+    overflow-x: scroll;
+}
