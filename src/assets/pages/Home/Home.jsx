@@ -7,11 +7,13 @@ import Product from './Product';
 import Gallery from './Gallery';
 import Review from './Review';
 import Offer from '../Offer/Offer';
+import Counter from '../Counter/Counter';
 
 const Home = () => {
     return (
         <div className='mx-auto max-w-7xl'>
             <Banner></Banner>
+            <Counter></Counter>
             <Product></Product>
             <BestSelling></BestSelling>
             <Review></Review>
