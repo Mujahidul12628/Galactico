@@ -5,6 +5,8 @@ import Loader from "../Loader/Loader";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { AuthContext } from "../../providers/AuthProvider";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -23,6 +25,7 @@ const MainLayout = () => {
                     </div>
                     <Footer></Footer>
                     <Toaster></Toaster>
+                    <ToastContainer></ToastContainer>
                 </>
             )}
         </div>

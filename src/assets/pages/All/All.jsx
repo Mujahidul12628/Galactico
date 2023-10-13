@@ -4,7 +4,7 @@ const All = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5111/all')
+        fetch('https://galactico-server.vercel.app/all')
             .then(response => response.json())
             .then(data => setData(data))
             .catch(error => console.error('Error fetching data:', error));

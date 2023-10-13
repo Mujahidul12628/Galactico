@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddToy = ({ onAddToy }) => {
     const [toyData, setToyData] = useState({
@@ -21,52 +23,6 @@ const AddToy = ({ onAddToy }) => {
         }));
     };
 
-
-    //     e.preventDefault();
-    //     // Call a function to add the toy data
-    //     onAddToy(toyData);
-    //     // Optional: Clear the form after submission
-    //     setToyData({
-    //         toyName: '',
-    //         sellerName: '',
-    //         sellerEmail: '',
-    //         quantity: '',
-    //         subCategory: '',
-    //         price: '',
-    //         photoURL: '',
-    //         toyDetails: '',
-    //     });
-    // };
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-
-    //     // Check if any of the required fields are empty
-    //     const requiredFields = ['toyName', 'sellerName', 'sellerEmail', 'quantity', 'subCategory', 'price', 'photoURL', 'toyDetails'];
-
-    //     for (const field of requiredFields) {
-    //         if (!toyData[field]) {
-    //             alert(`Please fill  ${field.replace(/([A-Z])/g, ' $1').toLowerCase()} element box`);
-    //             return;
-    //         }
-    //     }
-
-    //     // Call a function to add the toy data
-    //     onAddToy(toyData);
-
-    //     // Optional: Clear the form after submission
-    //     setToyData({
-    //         toyName: '',
-    //         sellerName: '',
-    //         sellerEmail: '',
-    //         quantity: '',
-    //         subCategory: '',
-    //         price: '',
-    //         photoURL: '',
-    //         toyDetails: '',
-    //     });
-    // };
-
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -75,15 +31,22 @@ const AddToy = ({ onAddToy }) => {
 
         for (const field of requiredFields) {
             if (!toyData[field]) {
-                alert(`Please fill up ${field.replace(/([A-Z])/g, ' $1').toLowerCase()} box`);
+                toast.error(`Please fill up ${field.replace(/([A-Z])/g, ' $1').toLowerCase()} box`);
                 return; // Stop form submission if any required field is empty
             }
+        }
+
+        // If all required fields are not empty, show a message
+        if (requiredFields.every(field => toyData[field])) {
+            toast.success('Product added successfully', {
+                autoClose: 1000,
+            });
         }
 
         // Call a function to add the toy data
         onAddToy(toyData);
 
-        // Clear the form after submission
+        // Clear the form after successful submission
         setToyData({
             toyName: '',
             sellerName: '',
@@ -94,7 +57,11 @@ const AddToy = ({ onAddToy }) => {
             photoURL: '',
             toyDetails: '',
         });
+
+
     };
+
+
 
 
     return (
@@ -118,10 +85,16 @@ const AddToy = ({ onAddToy }) => {
                         <p>Quantity*</p>
                         <input className='border-2 mt-1 border-green-600 rounded-md p-2 w-full' type="number" name="quantity" value={toyData.quantity} onChange={handleChange} />
                     </label>
+
                     <label className='font-semibold text-sm'>
                         <p>Sub Category*</p>
-                        <input className='border-2 mt-1 border-green-600 rounded-md p-2 w-full' type="text" name="subCategory" value={toyData.subCategory} onChange={handleChange} />
+                        <select className='border-2 mt-1 border-green-600 rounded-md p-2 w-full' name="subCategory" value={toyData.subCategory} onChange={handleChange}>
+                            <option value="category1">Classic Zip</option>
+                            <option value="category2">Vintage Car</option>
+                            <option value="category3">Formula 1</option>
+                        </select>
                     </label>
+
                     <label className='font-semibold text-sm'>
                         <p>Price*</p>
                         <input className='border-2 mt-1 border-green-600 rounded-md p-2 w-full' type="number" name="price" value={toyData.price} onChange={handleChange} />

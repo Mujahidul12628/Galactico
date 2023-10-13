@@ -7,7 +7,7 @@ const AllToy = () => {
     const [showAll, setShowAll] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:5111/all')
+        fetch('https://galactico-server.vercel.app/all')
             .then(response => response.json())
             .then(data => setData(data))
             .catch(error => console.error('Error fetching data:', error));
@@ -17,7 +17,6 @@ const AllToy = () => {
 
     return (
         <div className=' custom-scrollbar'>
-            <h1>Toys Table</h1>
             {data.length > 0 ? (
                 <div>
                     <table className="w-full mt-8 border border-collapse">

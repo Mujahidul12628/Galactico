@@ -9,7 +9,7 @@ const BestSelling = () => {
             <h1 className='text-3xl font-semibold my-5 text-center text-green-600'>Best selling product</h1>
             <div className="container w-full mx-auto ">
                 <div
-                    className="bg-green-200 bg-opacity-100 rounded-lg carousel carousel-center" id='box-shad'
+                    className="item-bg bg-opacity-5  rounded-lg carousel carousel-center" id='box-shad'
                     showThumbs={false}
                     autoPlay
                     infiniteLoop

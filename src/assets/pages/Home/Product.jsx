@@ -6,9 +6,21 @@ import { Link } from 'react-router-dom';
 import './Home.css'
 import { AiFillStar } from "react-icons/ai";
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const Product = () => {
     const [activeTab, setActiveTab] = useState(0);
+
+    const handleBuyNowClick = () => {
+        toast.success('Product added successfully', {
+            autoClose: 1000,
+        });
+    };
 
     const handleClick = () => {
         toast.success("Hello World!");
@@ -21,12 +33,22 @@ const Product = () => {
 
     const [tabData, setTabData] = useState([]);
 
+
+
     useEffect(() => {
-        fetch("http://localhost:5111/toysData")
+        fetch("https://galactico-server.vercel.app/toysData")
             .then(response => response.json())
             .then(data => setTabData(data))
             .catch(error => console.error('Error fetching JSON data:', error));
+
+        // Initialize AOS
+        AOS.init({
+            duration: 700,
+            easing: 'ease-in-out',
+            once: true,
+        });
     }, []);
+
     return (
         <div>
             <h1 className='text-3xl font-semibold my-5 text-center text-green-600'>Product</h1>
@@ -54,6 +76,7 @@ const Product = () => {
                                         <div
                                             key={vIndex}
                                             className="card card-compact bg-base-100 box-shadow-carousel "
+
                                         >
                                             {/* <figure>
                                                 <img
@@ -90,14 +113,15 @@ const Product = () => {
                                                     src={vehicle.image}
                                                     alt={vehicle.name}
                                                     className="w-5/6 h-56 mx-auto md:w-72 md:h-60 "
+                                                    data-aos="fade-down"
                                                 />
                                                 <div className="card-body">
                                                     <h2 className="card-title">
-                                                        <span className='text-2xl'>{vehicle.name}</span>
+                                                        <span className='text-2xl' data-aos="fade-right" >{vehicle.name}</span>
                                                         <div className="badge bg-slate-400 text-white rounded-full px-1 font-thin ">New Arival</div>
                                                     </h2>
-                                                    <p className='text-start text-green-600 text-xl font-semibold'>Price: {vehicle.price}</p>
-                                                    <div className='flex justify-start items-center text-xl text-tart text-amber-500'>
+                                                    <p data-aos="zoom-in" className='text-start text-green-600 text-xl font-semibold'>Price: {vehicle.price}</p>
+                                                    <div data-aos="flip-left" className='flex justify-start items-center text-xl text-tart text-amber-500'>
                                                         <AiFillStar></AiFillStar>
                                                         <AiFillStar></AiFillStar>
                                                         <AiFillStar></AiFillStar>
@@ -106,11 +130,19 @@ const Product = () => {
                                                     </div>
 
                                                     <div className="card-actions justify-end">
-                                                        <button className=" px-2 py-1 rounded-sm transition duration-300 ease-in-out transform hover:-translate-y-1 border text-green-600 border-green-500 hover:bg-green-400 hover:text-white ">
-                                                            Buy Now
+                                                        <button
+                                                            data-aos="fade-up"
+                                                            data-aos-anchor-placement="top-bottom"
+                                                            className="px-2 py-1 rounded-sm transition duration-300 ease-in-out transform hover:-translate-y-1 border text-green-600 border-green-500 hover:bg-green-400 hover:text-white"
+                                                            onClick={handleBuyNowClick}
+                                                        >
+                                                            Add product
                                                         </button>
                                                         <Link to={`/toysData/${vehicle?.id}`}>
-                                                            <button className="details px-2 py-1 rounded-sm border border-green-400 text-white hover:font-semibold transition duration-300 ease-in-out transform hover:-translate-y-1 button-bg">
+                                                            <button
+                                                                data-aos="fade-up"
+                                                                data-aos-anchor-placement="top-bottom"
+                                                                className="details px-2 py-1 rounded-sm border border-green-400 text-white hover:font-semibold transition duration-300 ease-in-out transform hover:-translate-y-1 button-bg">
                                                                 View Details
                                                             </button>
                                                         </Link>

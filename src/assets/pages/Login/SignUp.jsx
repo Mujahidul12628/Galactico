@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { RiEyeFill, RiEyeOffFill } from 'react-icons/ri';
 import google from '../../images/google1.png'
-import fb from '../../images/fb.png'
 import fb1 from '../../images/fb1.png'
 
 // import { AuthContext } from '../../providers/AuthProvider';
@@ -88,7 +87,7 @@ const SignUp = () => {
                         <div className="form-control">
                             <button className="font-semibold details py-2 md:py-2 rounded-md text-white border-2 border-green-400">Login</button>
                         </div>
-                        <div className='mx-auto mt-3'><span>Haven not any account yet? </span><Link to="/register" className='text-blue-500'> Register</Link></div>
+                        <div className='mx-auto mt-3'><span>Haven not any account yet? </span><Link to="/register" className='text-blue-500'>Register</Link></div>
                         <div className="form-control mt-6">
                             <button onClick={handleGoogleSignIn} className="bg-white border-2  py-1 rounded-md border-green-400 ">
                                 <img className=' rounded-md w-1/12 mx-auto' src={google} alt="Photo 4" />

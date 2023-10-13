@@ -8,7 +8,7 @@ const ViewDetails = () => {
     const [toyData, setToyData] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:5111/toysData/${id}`)
+        fetch(`https://galactico-server.vercel.app/toysData/${id}`)
             .then((res) => res.json())
             .then((data) => setToyData(data))
             .catch((error) => {
