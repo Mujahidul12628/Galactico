@@ -3,13 +3,15 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import DynamicTittle from '../Hook/DynamicTittle';
 
 const MyToy = () => {
+    DynamicTittle('My Toy')
     const [data, setData] = useState([]);
     const [showAll, setShowAll] = useState(false);
 
     useEffect(() => {
-        fetch('../../../../public/myToysData.json')
+        fetch('https://galactico-server-mujahidul12628.vercel.app/myToys')
             .then(response => response.json())
             .then(data => setData(data))
             .catch(error => console.error('Error fetching data:', error));

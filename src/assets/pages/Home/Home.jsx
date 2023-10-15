@@ -8,8 +8,11 @@ import Gallery from './Gallery';
 import Review from './Review';
 import Offer from '../Offer/Offer';
 import Counter from '../Counter/Counter';
+import DynamicTittle from '../Hook/DynamicTittle.js';
+
 
 const Home = () => {
+    DynamicTittle('Home')
     return (
         <div className='mx-auto max-w-7xl'>
             <Banner></Banner>

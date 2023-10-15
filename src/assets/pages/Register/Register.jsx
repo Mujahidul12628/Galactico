@@ -2,8 +2,11 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 
+import DynamicTittle from '../Hook/DynamicTittle';
+
 
 const Register = () => {
+    DynamicTittle('Register')
     const [error, setError] = useState('')
     const [success, setSuccess] = useState('')
 

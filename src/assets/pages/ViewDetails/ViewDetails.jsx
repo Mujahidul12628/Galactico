@@ -2,13 +2,15 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { HiArrowSmRight } from "react-icons/hi";
+import DynamicTittle from '../Hook/DynamicTittle';
 
 const ViewDetails = () => {
+    DynamicTittle('View Details')
     const { id } = useParams();
     const [toyData, setToyData] = useState(null);
 
     useEffect(() => {
-        fetch(`https://galactico-server.vercel.app/toysData/${id}`)
+        fetch(`https://galactico-server-mujahidul12628.vercel.app/toysData/${id}`)
             .then((res) => res.json())
             .then((data) => setToyData(data))
             .catch((error) => {

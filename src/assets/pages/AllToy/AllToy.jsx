@@ -1,13 +1,15 @@
 
 
 import React, { useEffect, useState } from 'react';
+import DynamicTittle from '../Hook/DynamicTittle';
 
 const AllToy = () => {
+    DynamicTittle('All Toy')
     const [data, setData] = useState([]);
     const [showAll, setShowAll] = useState(false);
 
     useEffect(() => {
-        fetch('https://galactico-server.vercel.app/all')
+        fetch('https://galactico-server-mujahidul12628.vercel.app/all')
             .then(response => response.json())
             .then(data => setData(data))
             .catch(error => console.error('Error fetching data:', error));

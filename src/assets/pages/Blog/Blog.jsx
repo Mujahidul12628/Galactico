@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import DynamicTittle from '../Hook/DynamicTittle';
 
 const Blog = () => {
+    DynamicTittle('Blog')
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('../../../../public/blog.json'); // Update the path to your JSON file
+                const response = await fetch('https://galactico-server-mujahidul12628.vercel.app/blog'); // Update the path to your JSON file
                 const data = await response.json();
                 setPosts(data);
             } catch (error) {

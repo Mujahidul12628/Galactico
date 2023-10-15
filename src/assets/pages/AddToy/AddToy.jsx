@@ -3,7 +3,10 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import DynamicTittle from '../Hook/DynamicTittle';
+
 const AddToy = ({ onAddToy }) => {
+    DynamicTittle('Add Toy')
     const [toyData, setToyData] = useState({
         toyName: '',
         sellerName: '',

@@ -36,7 +36,7 @@ const Product = () => {
 
 
     useEffect(() => {
-        fetch("https://galactico-server.vercel.app/toysData")
+        fetch("https://galactico-server-mujahidul12628.vercel.app/toysData")
             .then(response => response.json())
             .then(data => setTabData(data))
             .catch(error => console.error('Error fetching JSON data:', error));

@@ -8,7 +8,10 @@ import fb1 from '../../images/fb1.png'
 // import { AuthContext } from '../../providers/AuthProvider';
 import { AuthContext } from '../../providers/AuthProvider';
 
+import DynamicTittle from '../Hook/DynamicTittle';
+
 const SignUp = () => {
+    DynamicTittle('Login')
     const { signIn, signInWithGoogle } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate()
