@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyB2UHudp1gJRmaY-htBQfV3bCG5DnpNNuU",
-    authDomain: "trek-vibes.firebaseapp.com",
-    projectId: "trek-vibes",
-    storageBucket: "trek-vibes.appspot.com",
-    messagingSenderId: "138019406042",
-    appId: "1:138019406042:web:958305bcdfc181932ca5e3"
+    apiKey: "AIzaSyDd4vFOIN8VhRGIvSudh36tN0obuCcT38o",
+    authDomain: "firbase-client.firebaseapp.com",
+    projectId: "firbase-client",
+    storageBucket: "firbase-client.appspot.com",
+    messagingSenderId: "701869997219",
+    appId: "1:701869997219:web:05399054e55596767e1316"
 };
 
 // Initialize Firebase
